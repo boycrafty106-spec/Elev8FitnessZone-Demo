@@ -7,11 +7,15 @@
 <title>Elev8 Fitness Zone | Lohia Path, Patna | Premium Coaching Gym</title>
 <meta name="description" content="Elev8 Fitness Zone is Lohia Path, Patna's premier transformation gym. Expert coaching, structured fat loss & muscle building programs, upfront pricing, and real results.">
 
-<!-- High-Priority Responsive LCP Hero Image Preload -->
+<!-- High-Priority Responsive LCP Hero Image Preload (Media Query Targeted) -->
+<link rel="preload" as="image"
+      href="assets/elev8-hero-section-BG-image-mobile.webp"
+      media="(max-width: 767px)"
+      type="image/webp"
+      fetchpriority="high">
 <link rel="preload" as="image"
       href="assets/elev8-hero-section-BG-image.webp"
-      imagesrcset="assets/elev8-hero-section-BG-image-mobile.webp 767w, assets/elev8-hero-section-BG-image.webp 1280w"
-      imagesizes="100vw"
+      media="(min-width: 768px)"
       type="image/webp"
       fetchpriority="high">
 
@@ -22,7 +26,10 @@
 <!-- Premium Typography: Asynchronous Non-Render-Blocking Load with Fallback -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=Space+Mono:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=Space+Mono:wght@700&display=swap"
+      media="print"
+      onload="this.media='all'">
 <noscript>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=Space+Mono:wght@700&display=swap">
 </noscript>
@@ -3785,6 +3792,8 @@ body.modal-open {
   background-color: #050505;
   color: #FFFFFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 /* Atmospheric contrast shield centered behind accordion */
@@ -3919,6 +3928,8 @@ body.modal-open {
   background-color: #050505 !important;
   color: #FFFFFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 #findus .h2 { color: #FFFFFF; }
 #findus .section-sub { color: #A3A3A3; }
@@ -4133,6 +4144,8 @@ body.modal-open {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
   padding-block: clamp(5.5rem, 11vw, 8.5rem);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
 }
 
 /* Crystal-clear gym background layer with seamless top and bottom edge transitions */
@@ -5017,7 +5030,7 @@ html.js .reveal.is-visible {
               <div class="program-thumb">
                 <img src="assets/muscles-building.webp"
                      srcset="assets/muscles-building-480w.webp 480w, assets/muscles-building.webp 735w"
-                     sizes="(max-width: 639px) 76vw, (max-width: 1023px) 44vw, 460px"
+                     sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
                      alt="Muscular male bodybuilder flexing chest and biceps in front of gym equipment"
                      loading="lazy" decoding="async" width="735" height="779"
                      style="object-position: center 20%;">
@@ -5061,7 +5074,7 @@ html.js .reveal.is-visible {
               <div class="program-thumb">
                 <img src="assets/Fat-loss-program-800w.webp"
                      srcset="assets/Fat-loss-program-480w.webp 480w, assets/Fat-loss-program-800w.webp 800w"
-                     sizes="(max-width: 639px) 76vw, (max-width: 1023px) 44vw, 460px"
+                     sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
                      alt="Before and after progress comparison showing waist measurement with a measuring tape"
                      loading="lazy" decoding="async" width="600" height="420">
                 <div class="program-thumb-overlay">
@@ -5104,7 +5117,7 @@ html.js .reveal.is-visible {
               <div class="program-thumb">
                 <img src="assets/Strenght-Building-program-800w.webp"
                      srcset="assets/Strenght-Building-program-480w.webp 480w, assets/Strenght-Building-program-800w.webp 800w"
-                     sizes="(max-width: 639px) 76vw, (max-width: 1023px) 44vw, 460px"
+                     sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
                      alt="Male athlete performing heavy barbell back squats in a squat rack at Elev8"
                      loading="lazy" decoding="async" width="600" height="420">
                 <div class="program-thumb-overlay">
@@ -5147,7 +5160,7 @@ html.js .reveal.is-visible {
               <div class="program-thumb">
                 <img src="assets/program-beginner-800w.webp"
                      srcset="assets/program-beginner-480w.webp 480w, assets/program-beginner-800w.webp 800w"
-                     sizes="(max-width: 639px) 76vw, (max-width: 1023px) 44vw, 460px"
+                     sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
                      alt="Personal trainer coaching a male client seated on an incline bench holding dumbbells"
                      loading="lazy" decoding="async" width="600" height="420">
                 <div class="program-thumb-overlay">
@@ -5190,7 +5203,7 @@ html.js .reveal.is-visible {
               <div class="program-thumb">
                 <img src="assets/biginner-programe.webp"
                      srcset="assets/biginner-programe-480w.webp 480w, assets/biginner-programe.webp 735w"
-                     sizes="(max-width: 639px) 76vw, (max-width: 1023px) 44vw, 460px"
+                     sizes="(max-width: 639px) 240px, (max-width: 1023px) 44vw, 460px"
                      alt="Athletic young male flexing abs and physique against dark gym wall"
                      loading="lazy" decoding="async" width="735" height="985"
                      style="object-position: center 15%;">
@@ -5906,11 +5919,19 @@ html.js .reveal.is-visible {
         <!-- Left: Map Container -->
         <div class="map-placeholder-box reveal">
           <iframe
-            src="https://maps.google.com/maps?q=25.6012526,85.0697779&z=16&output=embed"
+            data-src="https://maps.google.com/maps?q=25.6012526,85.0697779&z=16&output=embed"
             title="Elev8 Fitness Zone location map in Lohia Path, Patna"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
+          <noscript>
+            <iframe
+              src="https://maps.google.com/maps?q=25.6012526,85.0697779&z=16&output=embed"
+              title="Elev8 Fitness Zone location map in Lohia Path, Patna"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </noscript>
         </div>
 
         <!-- Right: Verified Location Info matching Screenshot -->
@@ -6115,7 +6136,7 @@ html.js .reveal.is-visible {
   }
 
   /* 1.1 Footer Background Video Controller (IntersectionObserver Performance Engine) */
-  (function initFooterBackgroundVideo() {
+  function initFooterBackgroundVideo() {
     var footer = document.querySelector(".site-footer");
     var video = footer ? footer.querySelector(".footer-bg-video") : null;
     if (!footer || !video) return;
@@ -6175,7 +6196,12 @@ html.js .reveal.is-visible {
         }
       }
     });
-  })();
+  }
+  if (window.requestIdleCallback) {
+    requestIdleCallback(initFooterBackgroundVideo);
+  } else {
+    setTimeout(initFooterBackgroundVideo, 200);
+  }
 
   /* 2. Sticky Header Class on Scroll */
   var siteHeader = document.getElementById("siteHeader");
@@ -6206,7 +6232,8 @@ html.js .reveal.is-visible {
     var h = getHeaderHeight();
     if (h > 0) {
       var rounded = Math.round(h) + "px";
-      if (document.documentElement.style.getPropertyValue("--header-h") !== rounded) {
+      var current = getComputedStyle(document.documentElement).getPropertyValue("--header-h").trim();
+      if (current !== rounded) {
         document.documentElement.style.setProperty("--header-h", rounded);
       }
     }
@@ -6499,16 +6526,18 @@ html.js .reveal.is-visible {
     reveals.forEach(function(el) { observer.observe(el); });
   }
 
-  // Fail-safe: Reveal any remaining elements in or near viewport after 2.5s (covers slow/failed script or edge cases)
-  setTimeout(function() {
-    var vh = window.innerHeight || document.documentElement.clientHeight || 800;
-    document.querySelectorAll(".reveal:not(.is-visible)").forEach(function(el) {
-      var rect = el.getBoundingClientRect();
-      if (rect.top < vh * 1.5) {
-        el.classList.add("is-visible");
-      }
-    });
-  }, 2500);
+  // Fail-safe: Reveal any remaining elements in or near viewport after 2.5s (only for legacy browsers lacking IntersectionObserver)
+  if (!("IntersectionObserver" in window)) {
+    setTimeout(function() {
+      var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+      document.querySelectorAll(".reveal:not(.is-visible)").forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < vh * 1.5) {
+          el.classList.add("is-visible");
+        }
+      });
+    }, 2500);
+  }
 
   /* 7. Carousel Track Arrow Navigation */
   var carouselBtns = document.querySelectorAll(".carousel-btn");
@@ -6529,7 +6558,7 @@ html.js .reveal.is-visible {
   });
 
   /* 7.05 Training Programs Infinite-Loop Center-Focus Coverflow Engine (All Screen Sizes) */
-  (function initProgramsInfiniteCoverflow() {
+  function initProgramsInfiniteCoverflow() {
     var track = document.getElementById("programTrack");
     var dotsContainer = document.getElementById("programDots");
     var prevSideBtn = document.querySelector(".program-side-arrow--prev");
@@ -7100,7 +7129,8 @@ html.js .reveal.is-visible {
         applyExactRestValues();
       });
     }
-  })();
+  }
+  requestAnimationFrame(initProgramsInfiniteCoverflow);
 
   /* 7.1 Modern Google Reviews Carousel Navigation & Read More Toggles */
   var reviewsTrack = document.getElementById("reviewTrack");
@@ -7475,10 +7505,28 @@ html.js .reveal.is-visible {
     });
   }
 
-  /* 11. Google Maps Mobile Tap-to-Activate (Prevents Touch Hijack During Scroll) */
+  /* 11. Google Maps Mobile Tap-to-Activate & Lazy Intersection Loader */
   var mapBox = document.querySelector(".map-placeholder-box");
   if (mapBox) {
+    var mapIframe = mapBox.querySelector("iframe");
+    function loadMapIframe() {
+      if (mapIframe && !mapIframe.src && mapIframe.getAttribute("data-src")) {
+        mapIframe.src = mapIframe.getAttribute("data-src");
+      }
+    }
+    if ("IntersectionObserver" in window) {
+      var mapObserver = new IntersectionObserver(function(entries) {
+        if (entries && entries[0] && entries[0].isIntersecting) {
+          loadMapIframe();
+          mapObserver.disconnect();
+        }
+      }, { rootMargin: "400px 0px" });
+      mapObserver.observe(mapBox);
+    } else {
+      loadMapIframe();
+    }
     mapBox.addEventListener("click", function() {
+      loadMapIframe();
       this.classList.add("is-active");
     });
     document.addEventListener("click", function(e) {
@@ -7632,7 +7680,7 @@ html.js .reveal.is-visible {
      1:1 Pointer Tracking, Inertial Coast & Decay,
      Accruing Desktop Steppers, Video Preload & Autoplay Lifecycle
      =================================================================== */
-  (function initFeaturesMarquee() {
+  function initFeaturesMarquee() {
     var section = document.getElementById("features");
     var track = document.getElementById("featuresTrack");
     var wrapper = document.getElementById("featuresMarqueeWrapper") || (track ? track.parentElement : null);
@@ -8123,7 +8171,12 @@ html.js .reveal.is-visible {
       }
     });
 
-  })();
+  }
+  if (window.requestIdleCallback) {
+    requestIdleCallback(initFeaturesMarquee);
+  } else {
+    setTimeout(initFeaturesMarquee, 100);
+  }
 
   /* 13. ELEV8 IMPACT Hover & Dumbbell Burst Interaction Engine */
   function getButtonImpactLevel(btn) {
