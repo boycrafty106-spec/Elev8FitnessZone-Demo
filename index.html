@@ -1953,6 +1953,9 @@ html.nav-open .site-header {
   pointer-events: none;
   box-shadow: none !important;
 }
+#programs .carousel-track.is-scrolling .program-action {
+  pointer-events: auto;
+}
 
 /* Heading Carousel Controls hidden for #programs */
 #programs .carousel-controls {
@@ -7036,6 +7039,7 @@ html.js .reveal.is-visible {
     // If a non-centered card is clicked, scroll to center it instead of opening modal.
     // If card is already centered (matching current logical program), click opens modal normally.
     track.addEventListener("click", function(e) {
+      if (e.target.closest("[data-modal-source], .program-action")) return;
       var card = e.target.closest(".program-card");
       if (!card) return;
       var index = allCards.indexOf(card);
@@ -7053,7 +7057,7 @@ html.js .reveal.is-visible {
     }, true);
 
     // Complete Touch & Pointer Cancel Safety (Blocking Item 4)
-    function onTouchStart() { touchActive = true; track.classList.add("is-scrolling"); }
+    function onTouchStart() { touchActive = true; }
     function onTouchEnd() { touchActive = false; scheduleSettleCheck(); }
 
     track.addEventListener("touchstart", onTouchStart, { passive: true });
@@ -7602,23 +7606,13 @@ html.js .reveal.is-visible {
     }
   }
 
-  // Open on trigger button click
-  document.querySelectorAll("[data-modal-source]").forEach(function(btn) {
-    btn.addEventListener("click", function(e) {
-      e.preventDefault();
-      openProgramModal(this);
-    });
+  // Delegated modal open for all cards (originals and clones)
+  document.addEventListener("click", function(e) {
+    var btn = e.target.closest("[data-modal-source]");
+    if (!btn) return;
+    e.preventDefault();
+    openProgramModal(btn);
   });
-  var programTrackModalDelegate = document.getElementById("programTrack");
-  if (programTrackModalDelegate) {
-    programTrackModalDelegate.addEventListener("click", function(e) {
-      var btn = e.target.closest("[data-modal-source]");
-      if (btn) {
-        e.preventDefault();
-        openProgramModal(btn);
-      }
-    });
-  }
 
   // Close on close button click
   if (programModalClose) {
